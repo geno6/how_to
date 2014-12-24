@@ -73,7 +73,7 @@ Example Commit Messages
 -----------------------
 
 ```
-feat($browser): onUrlChange event (popstate/hashchange/polling)
+FEAT($browser): onUrlChange event (popstate/hashchange/polling)
 
 Added new event to $browser:
 - forward popstate event if available
