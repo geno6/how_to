@@ -1,7 +1,7 @@
 Git
 ===
 
-![Git plus GitHub](http://i.imgur.com/R1imkCJ.png)
+![Geno6 logo](http://geno6.com/wp-content/uploads/2014/08/geno6lgo.png)
 
 We use Git version control for all of our projects at [Geno6]. We host
 our code on Bitbucket. Large features get their own branch and are merged with the master branch.
