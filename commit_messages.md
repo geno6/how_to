@@ -3,10 +3,10 @@ Git
 
 ![Git plus GitHub](http://i.imgur.com/R1imkCJ.png)
 
-We use Git version control for all of our projects at [Geno6][]. We host
+We use Git version control for all of our projects at [Geno6]. We host
 our code on Bitbucket. Large features get their own branch and are merged with the master branch.
 
-This document is based on ![Sparkbox Git guide](https://github.com/sparkbox/how_to/blob/master/style/git/README.md)
+This document is based on [Sparkbox Git Guide]
 
 The Art of the Commit Message
 -----------------------------
@@ -155,6 +155,7 @@ scope: {
 The removed `inject` wasn't generaly useful for directives so there should be no code using it.
 ```
 
+[Sparkbox Git Guide]: https://github.com/sparkbox/how_to/blob/master/style/git/README.md
 [Geno6]: http://geno6.com
 [angularc]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
 [karmac]: http://karma-runner.github.io/0.8/dev/git-commit-msg.html
