@@ -8,6 +8,30 @@ our code on Bitbucket. Large features get their own branch and are merged with t
 
 This document is based on [Sparkbox Git Guide]
 
+
+Forming commits
+---------------
+
+
+The general rule for deciding what goes into a commit is:
+
+**Do not mix changes - functional/refactoring/bug fixes/ and**
+**ensure that there is only one "logical change" per commit.**
+
+
+**Things to avoid when creating commits**
+- Mixing whitespace changes with functional code changes.
+- Mixing two unrelated functional changes.
+- Sending large new features in a single giant commit.
+
+
+**This approach helps to reach a number of important goals**
+
+- Have a clear code history which helps to browse through repositories
+- Deliver high quality product to clients
+- Provide useful info to code reviewers
+
+
 The Art of the Commit Message
 -----------------------------
 
@@ -27,6 +51,11 @@ ensure that our commits stay small and are easy to browse.
 **The Title (the first line)**
 
 The title consists of the `<type>`, the `(<scope>)`, and the `<subject>`.
+
+If it relates to a Redmine task, put the Redmine task number in parentheses
+in the end of the line. (ex. [TASK] Register: Add the secret key field
+(#1024)) This helps us track issues with their commits.
+
 
 **Allowed Values for `<type>`**
 
@@ -55,19 +84,36 @@ _changes_.
 
 The body of the commit message should use a style similar to the one proposed
 in this [article by tpope][tpope]. The body, just like the subject, should use
-an impertivite tone.
+an imperative tone.
 
 
 _Inspired by [Angular][angularc] and [Karma's][karmac] commit style._
 
 **The Footer**
 
-Here's where we references items in our product management tool. [Sprintly][]
-allows for many different styles of references. Here are some examples:
+Here's where we additionally reference items in our product management tool. [Redmine][]
+allows for many different customizable styles of references.
 
+When fetched from the repositories, commit messages are scanned for
+referenced or fixed/finished issue IDs. Redmine looks for an issue ID
+and/or special keyword for referencing or changing issue status to
+"finished".
+After a keyword issue IDs can be separated with a space, a comma or &.
+
+The keywords are caseinsensitive and at least one blankspace or colon is
+needed between the keyword and the first hash to produce a match.
+
+Referencing keywords are "refs", "references", "IssueID"
+Finish keywords are "finishes", "fixes"
+
+Here are some examples:
+
+*   `This commit refs:#1, #2 and fixes #3`
+*   `This commit References  #1, #2 and fixes #3`
+*   `This commit REFS: #1, #2 and finishes #3`
 *   `References #1, #4, and #2.`
-*   `Fix #1.` _note this marks the item as accepted in Sprintly_
-*   `Closes #1 and #2.` _note this marks the item as accepted in Sprintly_
+*   `Fixes #1.` _note this marks the item as finished in Redmine_
+*   `Finishes #1, #2.` _note this marks both items as finished in Redmine_
 
 Example Commit Messages
 -----------------------
@@ -75,7 +121,7 @@ Example Commit Messages
 ```
 FEAT($browser): onUrlChange event (popstate/hashchange/polling)
 
-Added new event to $browser:
+Add new event to $browser:
 - forward popstate event if available
 - forward hashchange event if popstate not available
 - do polling when neither popstate nor hashchange available
@@ -84,7 +130,7 @@ Breaks $browser.onHashChange, which was removed (use onUrlChange instead)
 ```
 
 ```
-FIX($compile): couple of unit tests for IE9
+FIX($compile): Add a couple of unit tests for IE9
 
 Older IEs serialize html uppercased, but IE9 does not...
 Would be better to expect case insensitive, unfortunately jasmine does
@@ -95,17 +141,6 @@ Breaks foo.bar api, foo.baz should be used instead
 ```
 
 ```
-FEAT(directive): ng:disabled, ng:checked, ng:multiple, ng:readonly, ng:selected
-
-New directives for proper binding these attributes in older browsers (IE).
-Added coresponding description, live examples and e2e tests.
-
-finishes #351
-```
-
-```
-STYLE($location): add couple of missing semi colons
-
 DOCS(guide): update fixed docs from Google Docs
 
 Fix a couple of typos:
@@ -163,4 +198,4 @@ The removed `inject` wasn't generaly useful for directives so there should be no
 [tpope]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 [pull_request]: khttps://help.github.com/articles/using-pull-requests
 [Sparkbox]: http://seesparkbox.com
-[Sprintly]: https://sprint.ly/
+[Redmine]: https://redmine.org/
