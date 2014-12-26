@@ -53,7 +53,7 @@ ensure that our commits stay small and are easy to browse.
 The title consists of the `<type>`, the `(<scope>)`, and the `<subject>`.
 
 If it relates to a Redmine task, put the Redmine task number in parentheses
-in the end of the line. (ex. [TASK] Register: Add the secret key field
+in the end of the line. (ex. FEAT(Register): Add the secret key field
 (#1024)) This helps us track issues with their commits.
 
 
