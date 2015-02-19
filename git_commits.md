@@ -9,6 +9,25 @@ our code on Bitbucket. Large features get their own branch and are merged with t
 This document is based on [Sparkbox Git Guide]
 
 
+General thoughts
+----------------
+
+
+Any software project is a collaborative project. It has at least two developers, the original developer and the original developer a few weeks or months later when the train of thought has long left the station. This later self needs to reestablish the context of a particular piece of code each time a new bug occurs or a new feature needs to be implemented. 
+
+Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it to as small as possible. Commit messages can do exactly that and as a result, a commit message shows whether a developer is a good collaborator.
+
+**A good commit message should answer three questions about a patch:**
+
+- **Why is it necessary?** It may fix a bug, it may add a feature, it may improve performance, reliabilty, stability, or just be a change for the sake of correctness.
+
+- **How does it address the issue?** For short obvious patches this part can be omitted, but it should be a high level description of what the approach was.
+
+- **What effects does the patch have?** (In addition to the obvious ones, this may include benchmarks, side effects, etc.)
+
+These three questions establish the context for the actual code changes, put reviewers and others into the frame of mind to look at the diff and check if the approach chosen was correct.
+
+
 Forming commits
 ---------------
 
