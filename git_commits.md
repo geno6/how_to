@@ -6,7 +6,7 @@ Git
 We use Git version control for all of our projects at [Geno6]. We host
 our code on Bitbucket. Large features get their own branch and are merged with the master branch.
 
-This document is based on [Sparkbox Git Guide]
+This document is based on [Sparkbox Git Guide] and [Peter Hutterer blog post]
 
 
 General thoughts
@@ -210,6 +210,7 @@ The removed `inject` wasn't generaly useful for directives so there should be no
 ```
 
 [Sparkbox Git Guide]: https://github.com/sparkbox/how_to/blob/master/style/git/README.md
+[Peter Hutterer blog post]: http://who-t.blogspot.de/2009/12/on-commit-messages.html
 [Geno6]: http://geno6.com
 [angularc]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
 [karmac]: http://karma-runner.github.io/0.8/dev/git-commit-msg.html
