@@ -59,7 +59,7 @@ ensure that our commits stay small and are easy to browse.
 
 **The Layout**
 
-The Layout should have the following structure
+The layout should have the following structure
 
 - First line is 50 characters or less
 - Then a blank line
